@@ -1,7 +1,5 @@
 ##Запускаем проект с Docker Backend
 
-нужна Node.js 16.13.1
-
 ###Если у вас linux / Mac
 1. Дать права ( linux only )
 2. по пути ```backend/monolith/src/``` копируем файл ```.env.example``` и <br>
