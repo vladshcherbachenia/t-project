@@ -1,0 +1,7 @@
+node_modules
+/old/crack/backend/monolith/docker/mysql/data/binlog.*
+.composer
+/.idea
+/frontend/documentation
+non-stop.sh
+.env

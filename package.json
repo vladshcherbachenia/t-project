@@ -1,0 +1,24 @@
+{
+  "name": "hooks",
+  "version": "1.0.0",
+  "description": "нужна Node.js 16.13.1",
+  "main": "hook-commit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/leoProject1/leocrm.git"
+  },
+  "author": "Alex Vagulis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/leoProject1/leocrm/issues"
+  },
+  "homepage": "https://gitlab.com/leoProject1/leocrm#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "node-fetch": "^3.2.3"
+  },
+  "type": "module"
+}
