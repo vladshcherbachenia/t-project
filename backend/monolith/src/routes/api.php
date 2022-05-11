@@ -27,8 +27,8 @@ Route::apiResource('permissions',\App\Http\Controllers\PermissionController::cla
     ->only('index');
 
 Route::get('user', [\App\Http\Controllers\UserController::class, 'user'])->middleware('auth:api');
-Route::put('users/info', [\App\Http\Controllers\UserController::class, 'updateInfo'])->middleware('auth:api');
-Route::put('users/password', [\App\Http\Controllers\UserController::class, 'updatePassword'])->middleware('auth:api');
+Route::put('info/users', [\App\Http\Controllers\UserController::class, 'updateInfo'])->middleware('auth:api');
+Route::put('info/password', [\App\Http\Controllers\UserController::class, 'updatePassword'])->middleware('auth:api');
 Route::post('upload', [\App\Http\Controllers\ImageController::class, 'upload'])->middleware('auth:api');
 Route::get('export', [\App\Http\Controllers\OrderController::class, 'export'])->middleware('auth:api');
 Route::get('chart', [\App\Http\Controllers\DashboardController::class, 'chart'])->middleware('auth:api');

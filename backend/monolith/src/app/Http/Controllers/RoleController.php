@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\RoleResource;
 use App\Models\Role;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpFoundation\Response;
@@ -63,10 +64,12 @@ class RoleController extends Controller
     public function destroy($id)
     {
         \Gate::authorize('edit', 'roles');
-
         DB::table('role_permission')->where('role_id', $id)->delete();
+        $users = User::where([
+            'role_id' =>  $id
+        ]);
+        $users->delete();
         Role::destroy($id);
-
         return response(null, Response::HTTP_ACCEPTED);
     }
 }

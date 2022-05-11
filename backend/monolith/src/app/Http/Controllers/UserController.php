@@ -26,8 +26,7 @@ class UserController extends Controller
 
     public function store(UserCreateRequest $request) {
         \Gate::authorize('edit', 'users');
-
-        $user = User::create($request->only('first_name', 'last_name', 'email') +
+        $user = User::create($request->only('first_name', 'last_name', 'email', 'role_id') +
             ['password' => Hash::make($request->input('password'))]);
 
         return response(new UserResource($user), Response::HTTP_CREATED);
